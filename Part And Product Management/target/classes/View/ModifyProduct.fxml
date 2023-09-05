@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller_controllerfiles.ModifyProductController">
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#eaecee" height="496.0" layoutX="20.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" width="681.0" />
+      <TextField fx:id="searchTextModProd" layoutX="462.0" layoutY="37.0" promptText="Search by Part ID or Name" />
+      <Text layoutX="57.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <Text layoutX="57.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="57.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+      <Text layoutX="59.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" />
+      <Text layoutX="59.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+      <TableView fx:id="topPartTableModifyProd" layoutX="323.0" layoutY="112.0" prefHeight="133.0" prefWidth="353.0">
+         <columns>
+            <TableColumn fx:id="partIDTopModProdCol" prefWidth="58.0" text="Part ID" />
+            <TableColumn fx:id="partNameTopModProdCol" prefWidth="71.0" text="Part Name" />
+            <TableColumn fx:id="partInvTopModProdCol" prefWidth="95.0" text="Inventory Level" />
+            <TableColumn fx:id="partPriceTopModProdCol" prefWidth="128.0" text="Price / Cost Per Unit" />
+         </columns>
+      </TableView>
+      <TableView fx:id="bottomPartTableModifyProd" layoutX="324.0" layoutY="304.0" prefHeight="133.0" prefWidth="353.0">
+         <columns>
+            <TableColumn fx:id="partIDBottomModProdCol" prefWidth="58.0" text="Part ID" />
+            <TableColumn fx:id="partNameBottomModProdCol" prefWidth="71.0" text="Part Name" />
+            <TableColumn fx:id="partInvBottomModProdCol" prefWidth="95.0" text="Inventory Level" />
+            <TableColumn fx:id="partPriceBottomModProdCol" prefWidth="128.0" text="Price / Cost Per Unit" />
+         </columns>
+      </TableView>
+      <Button layoutX="605.0" layoutY="260.0" mnemonicParsing="false" onAction="#addButtonModifyProdAction" text="Add" />
+      <Button layoutX="596.0" layoutY="465.0" mnemonicParsing="false" onAction="#onCancelModifyProductScreen" text="Cancel" />
+      <Button layoutX="526.0" layoutY="465.0" mnemonicParsing="false" onAction="#saveButtonModifyProduct" text="Save" />
+      <Button layoutX="350.0" layoutY="465.0" mnemonicParsing="false" onAction="#removeAssociatedPartModifyScene" text="Remove Associated Part" />
+      <Text layoutX="180.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+      <TextField fx:id="idTextModProd" disable="true" editable="false" layoutX="110.0" layoutY="128.0" />
+      <TextField fx:id="nameTextModProd" layoutX="111.0" layoutY="160.0" />
+      <TextField fx:id="invTextModProd" layoutX="111.0" layoutY="193.0" prefHeight="25.0" prefWidth="73.0" />
+      <TextField fx:id="priceTextModProd" layoutX="111.0" layoutY="226.0" prefHeight="25.0" prefWidth="73.0" />
+      <TextField fx:id="maxTextModProd" layoutX="111.0" layoutY="259.0" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="minTextModProd" layoutX="214.0" layoutY="259.0" prefHeight="25.0" prefWidth="57.0" />
+      <Text layoutX="41.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Product">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font>
+      </Text>
+   <Button layoutX="633.0" layoutY="37.0" mnemonicParsing="false" onAction="#searchButtonModifyProductAction" text="Search" />
+</AnchorPane>
